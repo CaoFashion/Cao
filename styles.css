@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+    margin-top: 0;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007aff;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f7;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.trends {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.trend-item {
+    display: inline-block;
+    margin: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.trend-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.trend-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.trend-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+footer ul li a:hover {
+    color: #007aff;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+}
+
