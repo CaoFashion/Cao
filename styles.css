@@ -27,57 +27,90 @@ body {
 }
 
 
-nav {
-    background-color: #fff;
-    border-bottom: 1px solid #e0e0e0;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
+/* Dropdown Menu Styles */
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
 nav ul li {
-    float: left;
+    position: relative;
 }
 
 nav ul li a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
     color: #333;
-    padding: 10px;
-    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #007aff;
+    background-color: #ddd;
 }
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    text-align: left;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .hero {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f5f5f7;
+    justify-content: center;
+    width: 100%;
+    height: 400px; /* Adjust height to make it square, assuming width is 100% */
+    background-color: #f5f5f7; /* Adjust background color if needed */
     text-align: center;
+    border: 2px solid #ddd; /* Optional border */
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
 }
 
 .hero h1 {
-    font-size: 4rem;
-    margin: 0;
+    font-size: 2.5rem; /* Adjust size as needed */
+    margin-bottom: 10px; /* Space between h1 and p */
+    color: #333;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    color: #555;
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #666;
+    margin-top: 0; /* Ensures margin is reset */
 }
+
+.hero * {
+    margin: 0;
+    padding: 0;
+}
+
 
 .trends {
     padding: 40px 20px;
@@ -88,25 +121,103 @@ nav ul li a:hover {
 .trend-item {
     display: inline-block;
     margin: 20px;
-    width: 200px;
-    text-align: center;
+    width: calc(50% - 40px); /* Adjust width as needed */
+    vertical-align: top;
 }
 
-.trend-item img {
-    width: 100%;
+.trend-image {
+    width: 45%;
     height: auto;
     border-radius: 10px;
+    margin: 0 10px; /* Add horizontal margin between images */
 }
 
-.trend-item h3 {
-    font-size: 1.5rem;
-    margin-top: 10px;
+h2 {
+    font-size: 2rem; /* Increase size of h2 */
+}
+
+p {
+    font-size: 1.2rem; /* Increase size of paragraphs */
     color: #333;
 }
 
+.about {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 600px; /* Set maximum width for text */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.trend-item {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.trend-item h3,
 .trend-item p {
-    font-size: 1rem;
-    color: #666;
+    position: relative;
+    z-index: 1;
+}
+
+.trend-item a {
+    display: block;
+    position: relative;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.trend-item a:hover {
+    color: #ccc; /* Adjust hover color */
+}
+
+/* Ensuring link visibility with background highlight */
+a {
+    color: #007aff; /* Visible color for links */
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1); /* Slight background highlight for better visibility */
+    padding: 2px 4px; /* Adding some padding to make the background highlight more visible */
+}
+
+a:hover {
+    color: #0056b3; /* Slightly darker shade on hover */
+    text-decoration: underline;
+}
+
+iframe {
+    width: 100vw; /* Full width of the viewport */
+    height: 80vh; /* Adjust height as needed */
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Ensure it behaves as a block element */
 }
 
 
